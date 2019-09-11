@@ -1,7 +1,9 @@
+"""Tests for core models"""
 from django.test import TestCase
 from django.contrib.auth import get_user_model
 
 from core import models
+
 
 def sample_user(email='test@londonappdev.com', password='testpass'):
     """Create a sample user"""
@@ -9,6 +11,7 @@ def sample_user(email='test@londonappdev.com', password='testpass'):
 
 
 class ModelTests(TestCase):
+    """Tests for models within the app"""
     def test_create_user_with_email_successful(self):
         """ Test creating a new user with an email is successful"""
         email = 'test@londonappdev.com'
